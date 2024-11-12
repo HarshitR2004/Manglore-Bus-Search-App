@@ -81,8 +81,6 @@ A Flutter application that helps users find and navigate bus routes in Mangalore
 
 [Screen Recording of the app](https://drive.google.com/file/d/1DNRf3iNIOpUogIZ8AvtjreJTzIiRWVhe/view?usp=sharing)
 
-# App Screenshots
-
 ## Home Screen
 ![Home Screen](Screenshots/Screenshot_20241112_093711.png)
 
