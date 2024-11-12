@@ -100,27 +100,16 @@ A Flutter application that helps users find and navigate bus routes in Mangalore
 - **Development OS**: Windows
 - **Tested on**: Windows 11
 
-## Design Tools & UI/UX Interest 🎨
+## API Integration 🌐
 
-- **Degisn Tools**: No specific design tools used
-- **UI/UX Intrest**: Keen to explore and learn about the UI/UX domain
+The app integrates with the following API endpoints:
 
-## Installation 🛠️
+[API Documentation](https://app-bootcamp.iris.nitk.ac.in/docs)
 
-1. Clone the repository
-```bash
-git clone [repository-url]
-```
+- `/bus_routes/` - Get all bus routes (paginated)
+- `/bus_routes/search/` - Search routes by location
+- `/bus_routes/{bus_number}` - Get specific route details
 
-2. Install dependencies
-```bash
-flutter pub get
-```
-
-3. Run the app
-```bash
-flutter run
-```
 
 ## Project Structure 📁
 
@@ -137,22 +126,11 @@ lib/
       ├── search_screen.dart
       └── route_detail_screen.dart
 ```
+## Design Tools & UI/UX Interest 🎨
 
-## API Integration 🌐
+- **Degisn Tools**: No specific design tools used
+- **UI/UX Intrest**: Keen to explore and learn about the UI/UX domain
 
-The app integrates with the following endpoints:
 
-[API Documentation](https://app-bootcamp.iris.nitk.ac.in/docs)
 
-- `/bus_routes/` - Get all bus routes (paginated)
-- `/bus_routes/search/` - Search routes by location
-- `/bus_routes/{bus_number}` - Get specific route details
-
-## Contributing 🤝
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
 
