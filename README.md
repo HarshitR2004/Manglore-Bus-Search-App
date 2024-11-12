@@ -57,20 +57,11 @@ A Flutter application that helps users find and navigate bus routes in Mangalore
 
 ## Known Bugs 🐛
 
-1. **Pagination Reset Issue**
-    - Description: Sometimes the pagination count resets when returning from the search screen
-    - Status: Under investigation
-    - Priority: Medium
-
-2. **Search Delay**
-    - Description: Search results may take longer to load with certain combinations of locations
-    - Status: Known issue
-    - Priority: Low
-
-3. **Route Display Truncation**
-    - Description: Very long route descriptions might get truncated on smaller devices
-    - Status: To be fixed
-    - Priority: Medium
+1. **Pagination Reset Issue**: Sometimes the pagination count resets when returning from the search screen
+    
+2. **Search Delay**: Search results may take longer to load with certain combinations of locations
+    
+3. **Route Display Truncation** :Very long route descriptions might get truncated on smaller devices
 
 ## References 📚
 
