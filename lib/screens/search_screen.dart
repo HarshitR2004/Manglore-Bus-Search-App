@@ -54,9 +54,9 @@ class _SearchScreenState extends State<SearchScreen> {
         title: const Text(
           'Search Routes',
           style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20.0,
-            color: Colors.black87
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+              color: Colors.black87
           ),
         ),
         backgroundColor: Colors.blueAccent,
@@ -140,7 +140,7 @@ class _SearchScreenState extends State<SearchScreen> {
           children: [
             Text(
               'Error: $error',
-              style: TextStyle(color: Colors.red, fontSize: 18),
+              style: const TextStyle(color: Colors.red, fontSize: 18),
             ),
             const SizedBox(height: 12),
             ElevatedButton(
@@ -201,7 +201,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
               ),
             ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.grey),
+            trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
             onTap: () {
               Navigator.push(
                 context,
@@ -217,4 +217,8 @@ class _SearchScreenState extends State<SearchScreen> {
     );
   }
 }
+
+
+
+
 

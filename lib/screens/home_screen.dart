@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text(
               'Error: $error',
-              style: TextStyle(color: Colors.red, fontSize: 18),
+              style: const TextStyle(color: Colors.red, fontSize: 18),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 12),
@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.grey),
+            trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
             onTap: () {
               Navigator.push(
                 context,

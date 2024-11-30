@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/bus_route_service.dart';
 import '../models/bus_route.dart';
+import '../screens/map_screen.dart';
 
 class RouteDetailScreen extends StatefulWidget {
   final String busNumber;
@@ -48,6 +49,22 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Bus ${widget.busNumber} Details'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.map),
+            onPressed: _route != null
+                ? () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => RouteMapScreen(
+                  fromLocation: _route!.fromLocation,
+                  toLocation: _route!.toLocation,
+                ),
+              ),
+            )
+                : null, // Disable button if _route is null
+          ),
+        ],
       ),
       body: buildBody(),
     );
@@ -65,7 +82,7 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
           children: [
             Text(
               'Error: $error',
-              style: TextStyle(color: Colors.red, fontSize: 18),
+              style: const TextStyle(color: Colors.red, fontSize: 18),
             ),
             const SizedBox(height: 12),
             ElevatedButton(
@@ -97,11 +114,7 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
                 children: [
                   Text(
                     'Bus ${_route!.busNumber}',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headlineMedium
-                        ?.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.blueAccent,
                     ),
@@ -109,28 +122,22 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      Icon(Icons.location_on, color: Colors.green),
+                      const Icon(Icons.location_on, color: Colors.blueAccent),
                       const SizedBox(width: 8),
                       Text(
                         'From: ${_route!.fromLocation}',
-                        style: Theme
-                            .of(context)
-                            .textTheme
-                            .titleLarge,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ],
                   ),
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      Icon(Icons.location_on, color: Colors.red),
+                      const Icon(Icons.location_on, color: Colors.red),
                       const SizedBox(width: 8),
                       Text(
                         'To: ${_route!.toLocation}',
-                        style: Theme
-                            .of(context)
-                            .textTheme
-                            .titleLarge,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ],
                   ),
@@ -146,11 +153,7 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
                 children: [
                   Text(
                     'Route:',
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .titleLarge
-                        ?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -158,10 +161,7 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
                   const SizedBox(height: 8),
                   Text(
                     _route!.route,
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .bodyLarge,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ],
               ),
@@ -172,3 +172,4 @@ class _RouteDetailScreenState extends State<RouteDetailScreen> {
     );
   }
 }
+

@@ -3,7 +3,7 @@ import '../models/bus_route.dart';
 
 class BusRouteItem extends StatelessWidget {
   final BusRoute busRoute;
-  BusRouteItem(this.busRoute);
+  const BusRouteItem(this.busRoute, {super.key});
 
   @override
   Widget build(BuildContext context) {
